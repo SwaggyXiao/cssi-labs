@@ -26,15 +26,17 @@
 
             <!-- WELCOME HERO -->
             <div class="column is-two-thirds has-text-left">
-              <h1 class="title is-1">What's on your mind?</h1>
+              <h1 class="title is-1" id="greeting">What's on your mind?</h1>
               <h1 class="title is-3">
                 “The most beautiful things are those that madness prompts and reason writes."
               </h1>
               <h1 class="subtitle is-5">
                 —Andre Gide
               </h1>
-              <a><button class="button is-link has-text-weight-medium is-medium is-centered">Click Here</button></a>
-              to view your notes.
+              <a><button class="button is-link has-text-weight-medium is-medium is-centered">Click Here to view your notes.
+              </button></a>
+              <button class="button is-link has-text-weight-medium is-medium is-centered" id="log-out" onclick="logOut();" >Log Out
+              </button>
             </div>
 
             <!-- NOTE FORM -->
@@ -51,6 +53,15 @@
                   <textarea class="textarea is-medium" id="noteText"></textarea>
                 </div>
               </div>
+              <!-- Tags section starts here -->
+              <label class="checkbox">
+                <input type="checkbox" id="work-input" onclick=`printThings(this);  this.value="off";`>
+                    Work
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="school-input" onclick=`printThings(this); this.value="off";`>
+                School
+              </label>
               <div class="control">
                 <button class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="handleNoteSubmit()">Create Note</button>
               </div>

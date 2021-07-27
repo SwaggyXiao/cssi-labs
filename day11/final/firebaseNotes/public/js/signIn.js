@@ -7,7 +7,6 @@ const signIn = () => {
     /** @type {firebase.auth.OAuthCredential} */
     var credential = result.credential;
     var token = credential.accessToken;
-
     // The signed-in user info.
     var user = result.user;
     window.location = 'writeNote.html';
